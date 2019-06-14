@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "tutorials",
+  "info": {
+    "name": "tutorial",
+    "description": "tutorial"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "content": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "user": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "tutorial"
+    }
+  }
+}

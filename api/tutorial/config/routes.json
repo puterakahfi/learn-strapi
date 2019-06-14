@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tutorials",
+      "handler": "Tutorial.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tutorials/count",
+      "handler": "Tutorial.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tutorials/:id",
+      "handler": "Tutorial.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tutorials",
+      "handler": "Tutorial.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tutorials/:id",
+      "handler": "Tutorial.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tutorials/:id",
+      "handler": "Tutorial.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
